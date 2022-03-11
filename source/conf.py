@@ -18,8 +18,8 @@
 # -- Project information -----------------------------------------------------
 
 project = 'PmPWorld'
-copyright = 'Since 2021, PmPBoy'
-author = 'Li Tianjue'
+copyright = 'Since 2021'
+author = 'PmPBoy'
 
 
 # The version info for the project you're documenting, acts as replacement for
@@ -36,10 +36,8 @@ version = '0.0'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['myst_parser',
-            'sphinx.ext.autodoc',
+extensions = ['sphinx.ext.autodoc',
             'sphinx.ext.githubpages',
-            'sphinx_gmt.gmtplot',
     ]
 
 # Add any paths that contain templates here, relative to this directory.
