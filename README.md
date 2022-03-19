@@ -1,6 +1,6 @@
 # The Moho-reflected PmP Wave
 <p align="center">
-  <img src="https://raw.githubusercontent.com/seisbench/seisbench/main/docs/_static/seisbench_logo_subtitle_outlined.svg" />
+  <img src="https://github.com/Seismic-Data-imaging-the-Earth/PmPWorld/blob/master/source/photos/PmPShow.png" />
 </p>
 
 ---
