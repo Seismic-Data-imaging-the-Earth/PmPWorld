@@ -42,10 +42,10 @@ Alternatively, you can clone the repository and run the same [examples](https://
 
 For more detailed information on Seisbench check out the [SeisBench documentation](https://seisbench.readthedocs.io/).
 
+---
 
 ## References
 
----
 * [Li et al. 2022. Moho Complexity in Southern California Revealed by Local PmP and Teleseismic Ps Waves](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2021JB023033)
 
 * [Ding et al. 2022. Deep Neural Networks for Creating Reliable PmP Database with a Case Study in Southern California](https://doi.org/10.48550/arXiv.2112.07655)
