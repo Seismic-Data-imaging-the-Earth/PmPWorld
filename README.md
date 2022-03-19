@@ -74,11 +74,10 @@ Check out the [contribution guidelines](https://github.com/seisbench/seisbench/b
   Otherwise, reach out to us, and we will work on finding a solution.
 
 ## References
-Reference publications for SeisBench:
 
 ---
-* [Moho Complexity in Southern California Revealed by Local PmP and Teleseismic Ps Waves](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2021JB023033)
+* [Li et al. 2022. Moho Complexity in Southern California Revealed by Local PmP and Teleseismic Ps Waves](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2021JB023033)
 
-* [Deep Neural Networks for Creating Reliable PmP Database with a Case Study in Southern California](https://doi.org/10.48550/arXiv.2112.07655)
+* [Ding et al. 2022. Deep Neural Networks for Creating Reliable PmP Database with a Case Study in Southern California](https://doi.org/10.48550/arXiv.2112.07655)
 
 
