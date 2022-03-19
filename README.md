@@ -77,16 +77,8 @@ Check out the [contribution guidelines](https://github.com/seisbench/seisbench/b
 Reference publications for SeisBench:
 
 ---
+* [Moho Complexity in Southern California Revealed by Local PmP and Teleseismic Ps Waves](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2021JB023033)
 
-* [SeisBench - A Toolbox for Machine Learning in Seismology](https://doi.org/10.1785/0220210324)
+* [Deep Neural Networks for Creating Reliable PmP Database with a Case Study in Southern California](https://doi.org/10.48550/arXiv.2112.07655)
 
-  _Reference publication for software._
-
----
-
-* [Which picker fits my data? A quantitative evaluation of deep learning based seismic pickers](https://doi.org/10.1029/2021JB023499)
-
-  _Example of in-depth bencharking study of deep learning-based picking routines using the SeisBench framework._
-
----
 
