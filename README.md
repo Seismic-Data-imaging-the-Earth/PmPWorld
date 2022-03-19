@@ -5,42 +5,8 @@
 
 ---
 
-[![PyPI - License](https://img.shields.io/pypi/l/seisbench)](https://github.com/seisbench/seisbench/blob/main/LICENSE)
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/seisbench/seisbench/main_push_action)](https://github.com/seisbench/seisbench)
-[![Read the Docs](https://img.shields.io/readthedocs/seisbench)](https://seisbench.readthedocs.io/en/latest/)
-[![PyPI](https://img.shields.io/pypi/v/seisbench)](https://pypi.org/project/seisbench/)
-[![Python 3.7](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/release/python-360/)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5568813.svg)](https://doi.org/10.5281/zenodo.5568813)
-
-The Seismology Benchmark collection (*SeisBench*) is an open-source python toolbox for 
-machine learning in seismology.
-It provides a unified API for accessing seismic datasets and both training and applying machine learning algorithms to seismic data.
-SeisBench has been built to reduce the overhead when applying or developing machine learning techniques for seismological tasks.
-
-## Getting started
-
-SeisBench offers three core modules, `data`, `models`, and `generate`.
-`data` provides access to benchmark datasets and offers functionality for loading datasets.
-`models` offers a collection of machine learning models for seismology.
-You can easily create models, load pretrained models or train models on any dataset.
-`generate` contains tools for building data generation pipelines.
-They bridge the gap between `data` and `models`.
-
-The easiest way of getting started is through our colab notebooks.
-
-| Examples |  |
-|---|---|
-| Dataset basics | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/seisbench/seisbench/blob/main/examples/01a_dataset_basics.ipynb) |
-| Model API | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/seisbench/seisbench/blob/main/examples/01b_model_api.ipynb) |
-| Generator Pipelines | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/seisbench/seisbench/blob/main/examples/01c_generator_pipelines.ipynb) |
-| Applied picking | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/seisbench/seisbench/blob/main/examples/02a_deploy_model_on_streams_example.ipynb) |
-| Using DeepDenoiser | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/seisbench/seisbench/blob/main/examples/02b_deep_denoiser.ipynb) |
-| Training PhaseNet (advanced) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/seisbench/seisbench/blob/main/examples/03a_training_phasenet.ipynb) |
-| Creating a dataset (advanced) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/seisbench/seisbench/blob/additional_example_workflows/examples/03b_creating_a_dataset.ipynb) |
-
-Alternatively, you can clone the repository and run the same [examples](https://github.com/seisbench/seisbench/tree/main/examples) locally.
-
-For more detailed information on Seisbench check out the [SeisBench documentation](https://seisbench.readthedocs.io/).
+This site will host a series of materials and database about the Moho-reflected wave — PmP phase. 
+At present, We have developed a two-stage workflow of identifying and picking PmP waves in a semiautomatic way ([Li et al., 2022](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2021JB023033)). Briefly speaking, the two-stage workflow includes two parts: At the first stage, high-quality PmP waves are automatically picked on selected seismograms. At the same time, a visual check on three-component waveforms is conducted to confirm that the chosen signals indeed come from Moho reflection. At the second stage, the volume of the PmP dataset is expanded by involving other waves traveling along similar paths as those picked at the first stage. By utilizing the newly developed two-stage workflow, we have built the first PmP database with 10,192 PmP waves from the broadband vertical-component seismic data retrieved from southern California Earthquake Data Center ([SCEDC](https://scedc.caltech.edu/)). 
 
 ---
 
