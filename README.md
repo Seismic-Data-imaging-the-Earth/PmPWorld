@@ -42,36 +42,6 @@ Alternatively, you can clone the repository and run the same [examples](https://
 
 For more detailed information on Seisbench check out the [SeisBench documentation](https://seisbench.readthedocs.io/).
 
-## Installation
-
-SeisBench can be installed in two ways.
-In both cases, you might consider installing SeisBench in a virtual environment, for example using [conda](https://docs.conda.io/en/latest/).
-
-The recommended way is installation through pip.
-Simply run:
-```
-pip install seisbench
-```
-Alternatively, you can install the latest version from source.
-For this approach, clone the repository, switch to the repository root and run:
-```
-pip install .
-```
-which will install SeisBench in your current python environment.
-
-## Contributing
-There are many ways to contribute to SeisBench and we are always looking forward to your contributions.
-Check out the [contribution guidelines](https://github.com/seisbench/seisbench/blob/main/CONTRIBUTING.md) for details on how to contribute.
-
-## Known issues
-
-- Some institutions and internet providers are blocking access to our data and model repository, as it is running on a non-standard port (2443).
-  This usually manifests in timeouts when trying to download data or model weights.
-  To verify the issue, try accessing [https://dcache-demo.desy.de:2443/](https://dcache-demo.desy.de:2443/) directly from the same machine.
-  We are working on a permanent solution for the issue.
-  In the meantime, if you are having trouble, try downloading through another network/VPN if possible.
-  You can also contact your network administrator to allow access to port 2443 on our server.
-  Otherwise, reach out to us, and we will work on finding a solution.
 
 ## References
 
