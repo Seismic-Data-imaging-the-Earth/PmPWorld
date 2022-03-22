@@ -33,6 +33,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -108,7 +109,11 @@
 </ul>
 <p class="caption"><span class="caption-text">PmP Database</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Southern California</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Southern California</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#pmp-database-by-two-stage-workflow">PmP Database by Two-Stage Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pmp-database-by-pmpnet">PmP Database by PmPNet</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../Northern_California/index.html">Northern California</a></li>
 </ul>
 
@@ -179,7 +184,34 @@
             
   <div class="section" id="southern-california">
 <h1>Southern California<a class="headerlink" href="#southern-california" title="Permalink to this headline">¶</a></h1>
-<p>Will be implemented soon.</p>
+<div class="section" id="pmp-database-by-two-stage-workflow">
+<h2>PmP Database by Two-Stage Workflow<a class="headerlink" href="#pmp-database-by-two-stage-workflow" title="Permalink to this headline">¶</a></h2>
+<p>By utilizing the newly developed two-stage workflow (<a class="reference external" href="https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2021JB023033">Li et al., 2002</a>),
+we have built the <a class="reference external" href="https://researchdata.ntu.edu.sg/dataset.xhtml?persistentId=doi:10.21979/N9/HKCXBF">first PmP database with 10,192 PmP waves</a>
+from the broadband vertical-component seismic data (from January 2000
+to December 2018) retrieved from southern California Earthquake Data Center (<a class="reference external" href="https://scedc.caltech.edu">SCEDC</a>).</p>
+</div>
+<div class="section" id="pmp-database-by-pmpnet">
+<h2>PmP Database by PmPNet<a class="headerlink" href="#pmp-database-by-pmpnet" title="Permalink to this headline">¶</a></h2>
+<p>Applying the pre-trained PmPNet (<a class="reference external" href="https://doi.org/10.48550/arXiv.2112.07655">Ding et al., 2002</a>) to the seismic database from
+January 1990 to December 2018 in southern California, we update the <a class="reference external" href="https://researchdata.ntu.edu.sg/dataset.xhtml?persistentId=doi:10.21979/N9/0O380V">PmP database with 28,093 picks</a>.</p>
+<p>Example of the PmP waves recorded at the short-period station CI.BRG and broadband station AZ.SND:</p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/PmPNet_Data1.png"><img alt="Example of PmP Waveforms." src="../../_images/PmPNet_Data1.png" style="width: 100.0%;" /></a>
+<p class="caption"><span class="caption-text">In the map, the seismic station is denoted as the black-filled square, and local earthquakes are represented as the red-filled stars.
+For the PmP waveforms, they have been aligned to the first P-wave arrivals and normalized in the displaying window.
+The onset time for the PmP wave is indicated by the red bar. Numbers in purple show the earthquake depth (evdp) and the
+event-station distance (dist) for each waveform.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>Data coverage of PmP database and direct inference about Moho geometry beneath southern California:</p>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="../../_images/PmPNet_Data2.png"><img alt="Data Coverage of PmP Database" src="../../_images/PmPNet_Data2.png" style="width: 100.0%;" /></a>
+<p class="caption"><span class="caption-text">The number of PmP reflection points counted at each node of a 30 km by 30 km grid. The Moho geometry estimated from the new PmP
+database at every node of the same grid. The Moho depth is the average over a reflection gather, assuming a constant Vp = 6.3 km/s.
+The Moho geometry compiled in California Moho Model version 1.0 (CMM-1.0, <a class="reference external" href="https://doi.org/10.1785/0220110118">Tape et al. 2012</a>), which is built mainly based on teleseismic Ps data and
+active-source surveys.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
 </div>
 
 

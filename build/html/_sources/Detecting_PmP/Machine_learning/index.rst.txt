@@ -7,6 +7,16 @@ identify PmP waves efficiently. **PmPNet** applies similar techniques in the mac
 of PmP datasets. The trained optimal **PmPNet** can efficiently achieve high precision and high recall simultaneously to automatically
 identify PmP waves from a massive seismic database.
 
+.. figure:: /photos/PmPNet_Trainflow.png
+   :alt: Training flow of PmPNet.
+   :width: 100.0%
+   :align: center
+
+   PmPNet training flow: (i) one batch of data points is fed into **PmPNet**, and the loss between the **PmPNet** output and the true
+   labels is computed; and (ii) the optimizer reads in the loss and update the trainable parameters of **PmPNet**. One epoch of
+   training consists of continuing this iteration until the whole dataset has been tranversed. The training phase for **PmPNet**
+   is complete when the pre-selected maximum number of epochs is reached.
+
 
 PmPNet Structure
 ----------------
@@ -18,6 +28,11 @@ which has been resampled at 40 Hz and covers the time window from 2 s before to 
 *Dist* refers to the epicentral distance, and *evdp* refers to the focal depth, both being repeated 8 times and concatenated
 to the end of the signal. The number of duplication 8 is chosen according to our experiments, and the final results presented in this
 paper are not sensitive to this selection.
+
+.. math::
+
+  input \ x := (envelope_{1},...,envelope_{281},\underbrace{dist,...,dist}_{8 \ times},\underbrace{evdp,...,evdp}_{8 \ times})
+
 
 **PmPNet** outputs three quantities: (i) the recovered input, (ii) the PmP travel time t (a positive real number), and (iii) the PmP
 probability p, a real number in [0, 1] representing the probability that the input seismic signal contains a PmP phase.
@@ -67,35 +82,40 @@ Besides, each loss function is defined as:
 
 *  :math:`l_{3}(t,t_{true}):=||t − t_{true}||_{1}` is absolute difference between the true traveltime and predicted traveltime.
 
-.. figure:: /photos/PmPNet_Trainflow.png
-   :alt: Training flow of PmPNet.
-   :width: 100.0%
-   :align: center
-
-   PmPNet training flow: (i) one batch of data points is fed into **PmPNet**, and the loss between the **PmPNet** output and the true
-   labels is computed; and (ii) the optimizer reads in the loss and update the trainable parameters of **PmPNet**. One epoch of
-   training consists of continuing this iteration until the whole dataset has been tranversed. The training phase for **PmPNet**
-   is complete when the pre-selected maximum number of epochs is reached.
 
 Performance of PmPNet
 ---------------------
 
 The validation performances of **PmPNet** shows that The proposed **PmPNet** can reach high precision(96.6%) and recall(85.3%) simultaneously.
-The average travel time absolute difference is around 0.33s, while maximum difference constantly stays within 5s. The recovered
-input can capture most of the patterns from the input signal, which indicates the latent variable is indeed a good representation of the input.
+The average travel time absolute difference is around 0.33s, while maximum difference constantly stays within 5s.
+
+.. figure:: /photos/PmPNet_Performance1.png
+   :alt: Performance of PmPNet.
+   :width: 100.0%
+   :align: center
+
+   The total training loss decreases as the epoch increases.
+   The precision-recall curve on validation set.
+   The PmP traveltime residual between the predicted and manually picked ones on validation set.
+
+The recovered input can capture most of the patterns from the input signal, which indicates the latent variable is indeed a good representation of the input.
+
+.. figure:: /photos/PmPNet_Performance2.png
+   :alt: Performance of PmPNet.
+   :width: 100.0%
+   :align: center
+
+   The **PmPNet** recovered input and the input component on validation set.
 
 Applying the trained **PmPNet** to the 19-year long vertical-component seismic data from January 2000 to December 2018, we are going to automatically
 identify the waveforms which could contain high-quality PmP waves. To achieve the goal, we select the waveforms with the PmP label
 with a probability of larger than 0.8. Result shows that the trained **PmPNet** has successfully recalled the most PmP waves (larger than 96 %) before 2011, and even for the seismic data after 2010 which are not involved in training the **PmPNet**, there is also a high recall value of larger than 85 %.
 
-.. figure:: /photos/PmPNet_Performance.jpg
+.. figure:: /photos/PmPNet_Performance3.png
    :alt: Performance of PmPNet.
    :width: 100.0%
    :align: center
 
-   Training and validation performance of **PmPNet**. (a) The total training loss decreases as the epoch increases.
-   (b) The precision-recall curve on validation set. (c) The PmP traveltime residual between the predicted and manually picked ones
-   on validation set. (d-e) The **PmPNet** recovered input and the input component on validation set. (f) PmP picks when applying the
-   trained **PmPNet** to real data. Blue bars show the picked PmP waves each year by the two-stage workflow, orange bars show the
-   identified PmP waves each year by the **PmPNet** with the probability of greater than 0.8, and green bars show the overlapped PmP waves
-   each year between the two identifiers.
+   PmP picks when applying the trained **PmPNet** to real data. Blue bars show the picked PmP waves each year by the two-stage workflow,
+   orange bars show the identified PmP waves each year by the **PmPNet** with the probability of greater than 0.8, and green bars show
+   the overlapped PmP waves each year between the two identifiers.
