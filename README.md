@@ -11,7 +11,7 @@ At present, We have developed a **two-stage workflow** of identifying and pickin
 
 By utilizing the high-quality PmP dataset (10,192 manual picks) in southern California, we further develop **PmPNet** ([**Ding et al., 2022**](https://doi.org/10.48550/arXiv.2112.07655)), a deep-neural-network-based algorithm to automatically identify PmP waves efficiently. **PmPNet** applies similar techniques in the machine learning community to address the unbalancement of PmP datasets. The trained optimal **PmPNet** can efficiently achieve high precision and high recall simultaneously to automatically identify PmP waves from a massive seismic database. Applying the pre-trained **PmPNet** to the seismic database from January 1990 to December 1999 in southern California, we obtain nearly twice more PmP picks than the original PmP dataset.
 
-More detailed information on PmP database and our developed workflow/code to identify PmP phase can be found at [**PmPWorld**](https://pmpworld.readthedocs.io/en/latest/) documentation.
+More detailed information on PmP database and our developed workflow/code to identify PmP phase can be found at [**PmPWorld**](https://pmpworld.readthedocs.io/en/latest/index.html) documentation.
 
 
 ---
