@@ -14,6 +14,14 @@ By utilizing the high-quality PmP dataset (10,192 manual picks) in southern Cali
 More detailed information on PmP database and our developed workflow/code to identify PmP phase can be found at [**PmPWorld**](https://pmpworld.readthedocs.io/en/latest/) documentation.
 
 
+---
+
+## Quick link
+
+* [PmP database built by two-stage workflow](https://researchdata.ntu.edu.sg/dataset.xhtml?persistentId=doi:10.21979/N9/HKCXBF) ([Li et al. 2022](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2021JB023033)).
+* PmP database built by PmPNet ([Ding et al. 2022](https://doi.org/10.48550/arXiv.2112.07655)).
+* Codes for PmPNet and PmP-traveltime-Net ([Ding et al. 2022](https://doi.org/10.48550/arXiv.2112.07655)).
+
 
 ---
 
