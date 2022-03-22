@@ -33,6 +33,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -103,7 +104,11 @@
 <p class="caption"><span class="caption-text">Detecting PmP</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../Waveform_stacking/index.html">Waveform Stacking</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Phase Identification</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Phase Identification</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#pmp-features">PmP features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#two-stage-workflow">Two-Stage Workflow</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../Machine_learning/index.html">Machine Learning</a></li>
 </ul>
 <p class="caption"><span class="caption-text">PmP Database</span></p>
@@ -179,7 +184,66 @@
             
   <div class="section" id="phase-identification">
 <h1>Phase Identification<a class="headerlink" href="#phase-identification" title="Permalink to this headline">¶</a></h1>
-<p>Will be implemented soon.</p>
+<div class="section" id="pmp-features">
+<h2>PmP features<a class="headerlink" href="#pmp-features" title="Permalink to this headline">¶</a></h2>
+<p>Previous studies have summarized the following criteria to identify PmP waves:</p>
+<ul class="simple">
+<li><p>PmP waves are usually prominent on seismic waveforms of local shallow crustal earthquakes (e.g., with epicentral distance from 50
+to 200 km and focal depth shallower than 20 km in southern California; <a class="reference external" href="https://doi.org/10.1029/97jb00883">Richards-Dinger &amp; Shearer. 1997</a>);</p></li>
+<li><p>The amplitude of the PmP wave is large and sometimes larger than that of the first P, especially at postcritical
+epicentral distances (e.g., &gt;70 or 80 km in the <a class="reference external" href="https://doi.org/10.1111/j.1365-246x.1991.tb06724.x">IASP91 model</a>;
+<a class="reference external" href="https://gfzpublic.gfz-potsdam.de/pubman/faces/ViewItemOverviewPage.jsp?itemId=item_65558">Bormann et al. 2012</a>;
+<a class="reference external" href="https://doi.org/10.1016/s0031-9201(01)00307-7">Nakajima et al., 2002</a>);</p></li>
+<li><p>Particle motions of the PmP and P waves are similar to each other, as both are compressional
+waves (<a class="reference external" href="https://doi.org/10.1016/s0031-9201(01)00307-7">Nakajima et al. 2002</a>).</p></li>
+</ul>
+<p>The process of picking PmP waves can be simplified and performed in an automatic manner if we further consider:</p>
+<ul class="simple">
+<li><p>There usually exists a low-amplitude zone between the P and PmP waves.</p></li>
+</ul>
+<p>The reliability of the picked PmP waves can be enhanced if we additionally consider:</p>
+<ul class="simple">
+<li><p>Once there is a visible PmP wave from the Moho interface, it is highly possible that the SmS
+wave can be observed simultaneously (<a class="reference external" href="https://doi.org/10.1016/s0031-9201(01)00307-7">Nakajima et al. 2002</a>).</p></li>
+</ul>
+</div>
+<div class="section" id="two-stage-workflow">
+<h2>Two-Stage Workflow<a class="headerlink" href="#two-stage-workflow" title="Permalink to this headline">¶</a></h2>
+<p>At the first stage:</p>
+<ul class="simple">
+<li><p>First, aligning the vertical-component waveforms with P-wave signal-to-noise ratio greater
+than 10 at the observed first P-wave arrivals.</p></li>
+</ul>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/PmPick_TSW1.png"><img alt="Align First P." src="../../_images/PmPick_TSW1.png" style="width: 30.0%;" /></a>
+</div>
+<ul class="simple">
+<li><p>Second, automatically searching for the PmP waves based on the PmP-P differential travel time using a series of modified
+HK models. Waveform envelopes with a strong signal in the PmP window (in black), and a low-amplitude zone (in orange)
+between the P (in blue) and PmP windows are selected.</p></li>
+</ul>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/PmPick_TSW2.png"><img alt="Automatically Search for PmP Waves." src="../../_images/PmPick_TSW2.png" style="width: 60.0%;" /></a>
+</div>
+<ul class="simple">
+<li><p>Third, retaining only those three-component waveforms with identifiable P, PmP, S, and SmS arrivals indicated by the
+color-coded vertical lines.</p></li>
+</ul>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/PmPick_TSW3.png"><img alt="Visually Check the Co-existence of P, PmP, S and SmS phases." src="../../_images/PmPick_TSW3.png" style="width: 60.0%;" /></a>
+</div>
+<p>At the second stage:</p>
+<ul class="simple">
+<li><p>Expanding the volume of the PmP waves picked in Stage I by assembling all the downloaded vertical-component waveforms
+with P-wave signal-to-noise ratio greater than 3 into common reflection gathers.</p></li>
+</ul>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="../../_images/PmPick_TSW4.png"><img alt="Expand the Data Volumn of PmP Waves." src="../../_images/PmPick_TSW4.png" style="width: 100.0%;" /></a>
+<p class="caption"><span class="caption-text">One example gather. Each gather contains only one stage-I reference waveform (top purple trace). Earthquake depth (evdp),
+event-station distance (dist), and event ID (EvtID) are also listed for each trace. The waveform similarity (CC) between the only
+stage-I waveform and every other waveform in the same gather is checked (&gt;0.7).</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</div>
 </div>
 
 
