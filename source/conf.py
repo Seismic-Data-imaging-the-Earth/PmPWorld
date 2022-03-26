@@ -38,7 +38,7 @@ version = '0.1'
 # ones.
 extensions = ['sphinx.ext.autodoc',
             'sphinx.ext.githubpages',
-              #   'sphinx-prompt',
+                 'sphinx-prompt',
     ]
 
 # Add any paths that contain templates here, relative to this directory.
