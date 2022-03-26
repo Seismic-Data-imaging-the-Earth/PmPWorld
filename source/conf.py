@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'PmPWorld'
-copyright = 'Since 2021'
+copyright = 'Since 2021, PmPBoy'
 author = 'PmPBoy'
 
 
@@ -38,6 +38,7 @@ version = '0.1'
 # ones.
 extensions = ['sphinx.ext.autodoc',
             'sphinx.ext.githubpages',
+            'sphinx-prompt',
     ]
 
 # Add any paths that contain templates here, relative to this directory.
