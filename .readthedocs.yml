@@ -26,9 +26,4 @@ sphinx:
 # Optionally declare the Python requirements required to build your docs
 python:
    install:
-   - requirements:
-     - sphinx
-     - sphinx-prompt
-     - myst-parser
-     - sphinx-gallery
-     - sphinx_rtd_theme
+   - requirements: source/requirements.txt
