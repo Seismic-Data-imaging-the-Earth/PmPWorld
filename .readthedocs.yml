@@ -1,0 +1,18 @@
+version: 2
+
+python:
+  version: "3.8"
+  install:
+    - method: pip
+      path: .
+      extra_requirements:
+      - sphinx
+      - sphinx-prompt
+      - myst-parser
+      - sphinx-gallery
+      - sphinx_rtd_theme
+
+
+sphinx:
+  builder: html
+  fail_on_warning: true
