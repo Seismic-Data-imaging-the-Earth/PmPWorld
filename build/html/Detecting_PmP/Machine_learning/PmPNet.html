@@ -1,0 +1,347 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Use PmPNet to Identify PmP Phase &mdash; PmPWorld  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PmPWorld
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Introduction/Earth_model/index.html">Earth Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Introduction/Synthetic_perspective/index.html">Synthetic Perspective</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Introduction/Field_perspective/index.html">Field Perspective</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Previous Study</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Previous_study/California/index.html">California</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Previous_study/Japan/index.html">Japan</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Detecting PmP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Waveform_stacking/index.html">Waveform Stacking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Phase_identification/index.html">Phase Identification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Machine Learning</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PmP Database</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../PmP_database/Southern_California/index.html">Southern California</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../PmP_database/Northern_California/index.html">Northern California</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PmPWorld</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Use PmPNet to Identify PmP Phase</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/Detecting_PmP/Machine_learning/PmPNet.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="use-pmpnet-to-identify-pmp-phase">
+<h1>Use PmPNet to Identify PmP Phase<a class="headerlink" href="#use-pmpnet-to-identify-pmp-phase" title="Permalink to this headline">¶</a></h1>
+<p><strong>Build the Running Environment</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>PmPNet</strong> is designed to operate on <a class="reference external" href="https://developer.nvidia.com/cuda-toolkit">CUDA</a> with at least 2,100-MiB memory.
+And Python version is better to choose 3.8.</p>
+</div>
+<p>Assuming you have <a class="reference external" href="https://www.anaconda.com/">Anaconda</a> already, set up a new environment named e.g., <strong>PmPNet</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><style type="text/css">
+span.prompt1:before {
+  content: "$ ";
+}
+</style><span class="prompt1">conda create -n PmPNet <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.8</span>
+</pre></div></div><p>Install <a class="reference external" href="https://jupyter.org/">JupyterLab</a> or <a class="reference external" href="https://jupyter.org/">Jupyter Notebook</a> which is used to run <strong>PmPNet</strong> then:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt1">conda install -c conda-forge jupyterlab</span>
+</pre></div></div><p>Install <a class="reference external" href="https://pandas.pydata.org/">pandas</a> to facilitate file manipulations:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt1">pip install wheel</span>
+<span class="prompt1">pip install pandas</span>
+</pre></div></div><p>Install <a class="reference external" href="https://docs.obspy.org/#">ObsPy</a> which is used to process seismic data then:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt1">conda install -c conda-forge obspy</span>
+</pre></div></div><p>Install <a class="reference external" href="https://scikit-learn.org/stable/">scikit-learn</a> which is used to prepare the
+train and validation data (e.g., standardization, randomly allocate train and validation data) then:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt1">conda install -c conda-forge scikit-learn</span>
+</pre></div></div><p>Install <a class="reference external" href="https://pypi.org/project/pickle-mixin/">pickle-mixin</a> which is used to transform a complex object
+into a byte stream and speed up data manipulation (e.g., reading and writing) then:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt1">pip install pickle-mixin</span>
+</pre></div></div><p>Install <a class="reference external" href="https://pytorch.org/">PyTorch</a> which is used to construct and run <strong>PmPNet</strong> then:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Be careful about the software compatibility between <strong>PyTorch</strong> and <strong>CUDA</strong>.
+You can check your <strong>CUDA</strong> version through <code class="docutils literal notranslate"><span class="pre">nvidia-smi</span></code> (assume you have installed the NVIDIA Linux driver),
+then choose a suitable <strong>PyTorch</strong> version at <code class="docutils literal notranslate"><span class="pre">https://anaconda.org/pytorch/pytorch/files</span></code>.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt1">conda install -c pytorch <span class="nv">pytorch</span><span class="o">=</span><span class="m">1</span>.11.0<span class="o">=</span>py3.8_cuda11.3_cudnn8.2.0_0</span>
+</pre></div></div><p><strong>Train PmPNet</strong></p>
+<ul class="simple">
+<li><p>Device configuration, Hyper-parameters setting, paths setting for data and result folders:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><style type="text/css">
+span.prompt2:before {
+  content: " ";
+}
+</style><span class="prompt2"><span class="kn">import</span> <span class="nn">torch</span></span>
+<span class="prompt2"><span class="kn">import</span> <span class="nn">os</span></span>
+<span class="prompt2"><span class="kn">import</span> <span class="nn">PmPNet</span> <span class="k">as</span> <span class="nn">PN</span></span>
+<span class="prompt2"></span>
+<span class="prompt2"><span class="c1"># Device configuration</span></span>
+<span class="prompt2"><span class="n">cuda</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span></span>
+<span class="prompt2"><span class="n">device</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s1">&#39;cuda&#39;</span> <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="k">else</span> <span class="s1">&#39;cpu&#39;</span><span class="p">)</span></span>
+<span class="prompt2"></span>
+<span class="prompt2"><span class="c1"># Hyper-parameters</span></span>
+<span class="prompt2"><span class="n">batch_size</span> <span class="o">=</span> <span class="mi">200</span></span>
+<span class="prompt2"><span class="n">num_epochs</span> <span class="o">=</span> <span class="mi">80</span></span>
+<span class="prompt2"><span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">1e-3</span></span>
+<span class="prompt2"></span>
+<span class="prompt2"><span class="c1"># Paths for different folders, data and result folders</span></span>
+<span class="prompt2"><span class="n">datadir</span><span class="o">=</span><span class="s2">&quot;/home/pmpboy/Github/Data&quot;</span></span>
+<span class="prompt2"><span class="n">wdir</span><span class="o">=</span><span class="s2">&quot;/home/pmpboy/Github/Result/Train_PN_result&quot;</span></span>
+<span class="prompt2"><span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">wdir</span><span class="p">):</span></span>
+<span class="prompt2">    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">wdir</span><span class="p">)</span></span>
+</pre></div></div><ul class="simple">
+<li><p>read in the training data:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt2"><span class="n">train_loader</span><span class="p">,</span> <span class="n">test_loader</span> <span class="o">=</span> <span class="n">PN</span><span class="o">.</span><span class="n">readin_data_train</span><span class="p">(</span><span class="n">datadir</span><span class="p">,</span><span class="s2">&quot;TrainData_PmP_Net&quot;</span><span class="p">,</span><span class="n">batch_size</span><span class="p">)</span></span>
+</pre></div></div><ul class="simple">
+<li><p>train PmPNet:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt2"><span class="n">PN</span><span class="o">.</span><span class="n">NetTrain</span><span class="p">(</span><span class="n">wdir</span><span class="p">,</span><span class="s2">&quot;train_PN_log&quot;</span><span class="p">,</span><span class="s2">&quot;net_PN_model&quot;</span><span class="p">,</span><span class="n">train_loader</span><span class="p">,</span><span class="n">learning_rate</span><span class="p">,</span><span class="n">num_epochs</span><span class="p">,</span><span class="n">batch_size</span><span class="p">,</span><span class="n">device</span><span class="p">)</span></span>
+</pre></div></div><p>We will see such output during training PmPNet:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt2">Epoch [1/80], Step [1/420] Loss1: 3.105050,Loss2: 1.987768,Loss3: 0.338054</span>
+<span class="prompt2">Epoch [1/80], Step [101/420] Loss1: 0.527436,Loss2: 0.298014,Loss3: 0.143794</span>
+<span class="prompt2">Epoch [1/80], Step [201/420] Loss1: 0.458504,Loss2: 0.414377,Loss3: 0.150728</span>
+<span class="prompt2">Epoch [1/80], Step [301/420] Loss1: 0.396632,Loss2: 0.524836,Loss3: 0.144453</span>
+<span class="prompt2">Epoch [1/80], Step [401/420] Loss1: 0.355758,Loss2: 0.687848,Loss3: 0.141200</span>
+<span class="prompt2">Epoch [2/80], Step [1/420] Loss1: 0.371204,Loss2: 0.692910,Loss3: 0.128348</span>
+<span class="prompt2">Epoch [2/80], Step [101/420] Loss1: 0.386219,Loss2: 0.625399,Loss3: 0.130919</span>
+<span class="prompt2">Epoch [2/80], Step [201/420] Loss1: 0.307851,Loss2: 0.350751,Loss3: 0.122441</span>
+<span class="prompt2">Epoch [2/80], Step [301/420] Loss1: 0.273838,Loss2: 0.373369,Loss3: 0.145047</span>
+<span class="prompt2">Epoch [2/80], Step [401/420] Loss1: 0.279507,Loss2: 0.928377,Loss3: 0.130401</span>
+<span class="prompt2">Epoch [3/80], Step [1/420] Loss1: 0.264289,Loss2: 0.560267,Loss3: 0.149387</span>
+<span class="prompt2">Epoch [3/80], Step [101/420] Loss1: 0.269108,Loss2: 0.351606,Loss3: 0.130983</span>
+<span class="prompt2">......</span>
+</pre></div></div><ul class="simple">
+<li><p>model evaluation on test data:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt2"><span class="n">PN</span><span class="o">.</span><span class="n">netevalu</span><span class="p">(</span><span class="n">wdir</span><span class="p">,</span><span class="s2">&quot;net_PN_model&quot;</span><span class="p">,</span><span class="s2">&quot;prcurve_file&quot;</span><span class="p">,</span><span class="s2">&quot;predict_PN_file&quot;</span><span class="p">,</span><span class="n">test_loader</span><span class="p">,</span><span class="n">device</span><span class="p">)</span></span>
+</pre></div></div><ul class="simple">
+<li><p>quickly visualize the result:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt2"><span class="n">PN</span><span class="o">.</span><span class="n">plot_modeva</span><span class="p">(</span><span class="n">wdir</span><span class="p">,</span><span class="s2">&quot;train_PN_log&quot;</span><span class="p">,</span><span class="s2">&quot;prcurve_file&quot;</span><span class="p">,</span><span class="s2">&quot;predict_PN_file&quot;</span><span class="p">,</span><span class="s2">&quot;plot_PN_modevalu&quot;</span><span class="p">)</span></span>
+</pre></div></div><div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/plot_PN_modevalu.png"><img alt="Quickly Visualize the Performance of Trained PmPNet." src="../../_images/plot_PN_modevalu.png" style="width: 100.0%;" /></a>
+</div>
+<p><strong>Apply the pre-trained PmPNet to a certain year data</strong></p>
+<ul class="simple">
+<li><p>read in the real data:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt2"><span class="n">test_loader</span> <span class="o">=</span> <span class="n">PN</span><span class="o">.</span><span class="n">readin_data_real</span><span class="p">(</span><span class="n">datadir</span><span class="p">,</span><span class="s2">&quot;ValidationData_2015&quot;</span><span class="p">,</span><span class="n">batch_size</span><span class="p">)</span></span>
+</pre></div></div><ul class="simple">
+<li><p>predict probability the waveform contains a clear PmP phase and PmP traveltime:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt2"><span class="n">PN</span><span class="o">.</span><span class="n">netpredict</span><span class="p">(</span><span class="n">datadir</span><span class="p">,</span><span class="s2">&quot;ValidationData_2015&quot;</span><span class="p">,</span><span class="n">wdir</span><span class="p">,</span><span class="s2">&quot;net_PN_model&quot;</span><span class="p">,</span><span class="s2">&quot;predict_PN_file_2015&quot;</span><span class="p">,</span><span class="n">test_loader</span><span class="p">,</span><span class="n">device</span><span class="p">)</span></span>
+</pre></div></div><p>We will see such output during the process:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt2">NO.: 0   ID: 37272439   PmP_Prob: 0.323879  PmP_Time: 20.893116  dist: 127.9   evdp: 11.59   mag: 2.1  evtnm: 20151113_1204.CI.DTP</span>
+<span class="prompt2">NO.: 1   ID: 37198399   PmP_Prob: 0.000000  PmP_Time: 17.361309  dist: 103.3   evdp: 18.04   mag: 2.3  evtnm: 20150705_1315.CI.SYN</span>
+<span class="prompt2">NO.: 2   ID: 37150703   PmP_Prob: 0.000001  PmP_Time: 14.302899  dist: 76.6   evdp: 6.28   mag: 2.4  evtnm: 20150423_1454.CI.TOR</span>
+<span class="prompt2">NO.: 3   ID: 37501608   PmP_Prob: 0.000037  PmP_Time: 13.073999  dist: 60.6   evdp: 2.31   mag: 2.2  evtnm: 20151214_0708.CI.DPP</span>
+<span class="prompt2">NO.: 4   ID: 37508080   PmP_Prob: 0.000002  PmP_Time: 19.669258  dist: 111.8   evdp: 2.76   mag: 2.3  evtnm: 20151230_1027.CI.JVA</span>
+<span class="prompt2">NO.: 5   ID: 37148391   PmP_Prob: 0.000000  PmP_Time: 16.840071  dist: 91.2   evdp: -0.18   mag: 2.3  evtnm: 20150420_0231.CI.HEC</span>
+<span class="prompt2">NO.: 6   ID: 37305208   PmP_Prob: 0.000026  PmP_Time: 24.993418  dist: 151.4   evdp: 6.62   mag: 2.5  evtnm: 20150114_1203.CI.SYP</span>
+<span class="prompt2">NO.: 7   ID: 37301936   PmP_Prob: 0.000000  PmP_Time: 26.983143  dist: 170.9   evdp: 8.30   mag: 2.5  evtnm: 20150104_0943.CI.GATR</span>
+<span class="prompt2">NO.: 8   ID: 37402872   PmP_Prob: 0.000000  PmP_Time: 18.354214  dist: 102.4   evdp: 2.52   mag: 2.5  evtnm: 20150618_1256.CI.BLC</span>
+<span class="prompt2">NO.: 9   ID: 37403528   PmP_Prob: 0.000005  PmP_Time: 19.624937  dist: 111.2   evdp: 1.40   mag: 2.2  evtnm: 20150619_0218.CI.RVR</span>
+<span class="prompt2">......</span>
+</pre></div></div><ul class="simple">
+<li><p>quickly visualize the result:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt2"><span class="n">PN</span><span class="o">.</span><span class="n">plot_modpredict</span><span class="p">(</span><span class="n">wdir</span><span class="p">,</span><span class="s2">&quot;predict_PN_file_2015&quot;</span><span class="p">,</span><span class="s2">&quot;plot_PN_predict2015&quot;</span><span class="p">)</span></span>
+</pre></div></div><div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/plot_PN_predict2015.png"><img alt="Quickly Visualize the Performance of Trained PmPNet." src="../../_images/plot_PN_predict2015.png" style="width: 100.0%;" /></a>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright Since 2021, PmPBoy.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,298 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Use PmP-traveltime-Net to Predict PmP Traveltime &mdash; PmPWorld  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PmPWorld
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Introduction/Earth_model/index.html">Earth Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Introduction/Synthetic_perspective/index.html">Synthetic Perspective</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Introduction/Field_perspective/index.html">Field Perspective</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Previous Study</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Previous_study/California/index.html">California</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Previous_study/Japan/index.html">Japan</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Detecting PmP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Waveform_stacking/index.html">Waveform Stacking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Phase_identification/index.html">Phase Identification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Machine Learning</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PmP Database</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../PmP_database/Southern_California/index.html">Southern California</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../PmP_database/Northern_California/index.html">Northern California</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PmPWorld</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Use PmP-traveltime-Net to Predict PmP Traveltime</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/Detecting_PmP/Machine_learning/PmP-traveltime-Net.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="use-pmp-traveltime-net-to-predict-pmp-traveltime">
+<h1>Use PmP-traveltime-Net to Predict PmP Traveltime<a class="headerlink" href="#use-pmp-traveltime-net-to-predict-pmp-traveltime" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Device configuration, Hyper-parameters setting, paths setting for data and result folders:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><style type="text/css">
+span.prompt1:before {
+  content: " ";
+}
+</style><span class="prompt1"><span class="kn">import</span> <span class="nn">torch</span></span>
+<span class="prompt1"><span class="kn">import</span> <span class="nn">os</span></span>
+<span class="prompt1"><span class="kn">import</span> <span class="nn">PmP_traveltime_Net</span> <span class="k">as</span> <span class="nn">PTN</span></span>
+<span class="prompt1"></span>
+<span class="prompt1"><span class="c1"># Device configuration</span></span>
+<span class="prompt1"><span class="n">cuda</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span></span>
+<span class="prompt1"><span class="n">device</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s1">&#39;cuda&#39;</span> <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="k">else</span> <span class="s1">&#39;cpu&#39;</span><span class="p">)</span></span>
+<span class="prompt1"></span>
+<span class="prompt1"><span class="c1"># Hyper-parameters</span></span>
+<span class="prompt1"><span class="n">batch_size</span> <span class="o">=</span> <span class="mi">128</span></span>
+<span class="prompt1"><span class="n">num_epochs</span> <span class="o">=</span> <span class="mi">200</span></span>
+<span class="prompt1"><span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">5e-4</span></span>
+<span class="prompt1"></span>
+<span class="prompt1"><span class="c1"># Paths for different folders, data and result folders</span></span>
+<span class="prompt1"><span class="n">datadir</span><span class="o">=</span><span class="s2">&quot;/home/pmpboy/Github/Data&quot;</span></span>
+<span class="prompt1"><span class="n">wdir</span><span class="o">=</span><span class="s2">&quot;/home/pmpboy/Github/Result/Train_PTN_result&quot;</span></span>
+<span class="prompt1"><span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">wdir</span><span class="p">):</span></span>
+<span class="prompt1">    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">wdir</span><span class="p">)</span></span>
+</pre></div></div><ul class="simple">
+<li><p>read in the training data:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt1"><span class="n">train_loader</span><span class="p">,</span> <span class="n">test_loader</span> <span class="o">=</span> <span class="n">PTN</span><span class="o">.</span><span class="n">readin_data_train</span><span class="p">(</span><span class="n">datadir</span><span class="p">,</span><span class="s2">&quot;TrainData_PmP_traveltime_Net&quot;</span><span class="p">,</span><span class="n">batch_size</span><span class="p">)</span></span>
+</pre></div></div><ul class="simple">
+<li><p>train PmP-traveltime-Net:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt1"><span class="n">PTN</span><span class="o">.</span><span class="n">NetTrain</span><span class="p">(</span><span class="n">wdir</span><span class="p">,</span><span class="s2">&quot;train_PTN_log&quot;</span><span class="p">,</span><span class="s2">&quot;net_PTN_model&quot;</span><span class="p">,</span><span class="n">train_loader</span><span class="p">,</span><span class="n">learning_rate</span><span class="p">,</span><span class="n">num_epochs</span><span class="p">,</span><span class="n">batch_size</span><span class="p">,</span><span class="n">device</span><span class="p">)</span></span>
+</pre></div></div><p>We will see such output during training PmP-traveltime-Net:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt1">Epoch [1/200],  Step [1/63],  Loss: 1.060057</span>
+<span class="prompt1">Epoch [1/200],  Step [51/63],  Loss: 0.161801</span>
+<span class="prompt1">Epoch [2/200],  Step [1/63],  Loss: 0.125822</span>
+<span class="prompt1">Epoch [2/200],  Step [51/63],  Loss: 0.120287</span>
+<span class="prompt1">Epoch [3/200],  Step [1/63],  Loss: 0.093617</span>
+<span class="prompt1">Epoch [3/200],  Step [51/63],  Loss: 0.084045</span>
+<span class="prompt1">Epoch [4/200],  Step [1/63],  Loss: 0.073481</span>
+<span class="prompt1">Epoch [4/200],  Step [51/63],  Loss: 0.077970</span>
+<span class="prompt1">Epoch [5/200],  Step [1/63],  Loss: 0.104802</span>
+<span class="prompt1">......</span>
+</pre></div></div><ul class="simple">
+<li><p>model evaluation on test data:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt1"><span class="n">PTN</span><span class="o">.</span><span class="n">netevalu</span><span class="p">(</span><span class="n">wdir</span><span class="p">,</span><span class="s2">&quot;net_PTN_model&quot;</span><span class="p">,</span><span class="s2">&quot;predict_PTN_file&quot;</span><span class="p">,</span><span class="n">test_loader</span><span class="p">,</span><span class="n">device</span><span class="p">)</span></span>
+</pre></div></div><ul class="simple">
+<li><p>quickly visualize the result:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt1"><span class="n">PTN</span><span class="o">.</span><span class="n">plot_modeva</span><span class="p">(</span><span class="n">wdir</span><span class="p">,</span><span class="s2">&quot;train_PTN_log&quot;</span><span class="p">,</span><span class="s2">&quot;predict_PTN_file&quot;</span><span class="p">,</span><span class="s2">&quot;plot_PTN_modevalu&quot;</span><span class="p">)</span></span>
+</pre></div></div><div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/plot_PTN_modevalu.png"><img alt="Quickly Visualize the Performance of Trained PmPNet." src="../../_images/plot_PTN_modevalu.png" style="width: 100.0%;" /></a>
+</div>
+<p><strong>Apply the pre-trained PmP-traveltime-Net to a certain year data</strong></p>
+<ul class="simple">
+<li><p>read in the real data:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt1"><span class="n">test_loader</span> <span class="o">=</span> <span class="n">PTN</span><span class="o">.</span><span class="n">readin_data_real</span><span class="p">(</span><span class="n">datadir</span><span class="p">,</span><span class="s2">&quot;ValidationData_2015&quot;</span><span class="p">,</span><span class="n">batch_size</span><span class="p">)</span></span>
+</pre></div></div><ul class="simple">
+<li><p>give PmP traveltime prediction on real data:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt1"><span class="n">PTN</span><span class="o">.</span><span class="n">netpredict</span><span class="p">(</span><span class="n">datadir</span><span class="p">,</span><span class="s2">&quot;ValidationData_2015&quot;</span><span class="p">,</span><span class="n">wdir</span><span class="p">,</span><span class="s2">&quot;net_PTN_model&quot;</span><span class="p">,</span><span class="s2">&quot;predict_PTN_file_2015&quot;</span><span class="p">,</span><span class="n">test_loader</span><span class="p">,</span><span class="n">device</span><span class="p">)</span></span>
+</pre></div></div><ul class="simple">
+<li><p>quickly visualize the result:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt1"><span class="n">PTN</span><span class="o">.</span><span class="n">plot_predict</span><span class="p">(</span><span class="n">wdir</span><span class="p">,</span><span class="s2">&quot;predict_PTN_file_2015&quot;</span><span class="p">,</span><span class="s2">&quot;plot_PTN_predict_2015&quot;</span><span class="p">)</span></span>
+</pre></div></div><div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/plot_PTN_predict_2015.png"><img alt="Quickly Visualize the Performance of Trained PmPNet." src="../../_images/plot_PTN_predict_2015.png" style="width: 60.0%;" /></a>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright Since 2021, PmPBoy.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
