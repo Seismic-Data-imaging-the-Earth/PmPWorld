@@ -222,7 +222,25 @@ You can check your <strong>CUDA</strong> version through <code class="docutils l
 then choose a suitable <strong>PyTorch</strong> version at <code class="docutils literal notranslate"><span class="pre">https://anaconda.org/pytorch/pytorch/files</span></code>.</p>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt1">conda install -c pytorch <span class="nv">pytorch</span><span class="o">=</span><span class="m">1</span>.11.0<span class="o">=</span>py3.8_cuda11.3_cudnn8.2.0_0</span>
-</pre></div></div><p><strong>Train PmPNet</strong></p>
+</pre></div></div><p><strong>Prepare training and validation data</strong></p>
+<p>There’re 13 variables (highlighted are must-be variables while others can leave with empty) involved in training and validation data, they’re:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">waveform</span> <span class="pre">file</span> <span class="pre">name</span></code>: signal_fname = []</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">signal</span> <span class="pre">envelope</span></code> (normalized in the time window from 2s before to 5s after P-wave): envelop_signal = []</p></li>
+<li><p>earthquake ID given by the data center: signal_evid = []</p></li>
+<li><p>earthquake lontitude: signal_evlo = []</p></li>
+<li><p>earthquake latitude: signal_evla = []</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">earthquake</span> <span class="pre">depth</span></code>: PmP_evdp = []</p></li>
+<li><p>earthquake magnitude: PmP_mag = []</p></li>
+<li><p>station lontitude: signal_stlo = []</p></li>
+<li><p>station latitude: signal_stla = []</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">earthquake-station</span> <span class="pre">distance</span></code>: PmP_dist = []</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PmP</span> <span class="pre">label</span></code> (1, true PmP; 0, false PmP): PmP_label = []</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PmP</span> <span class="pre">arrival</span> <span class="pre">time</span></code> (PmP-P differential traveltime time): PmP_time = []</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">First-P</span> <span class="pre">traveltime</span></code>: PmP_ptime = []</p></li>
+</ul>
+<p>The data can be prepared using python script <code class="docutils literal notranslate"><span class="pre">DataReadin.ipynb</span></code>.</p>
+<p><strong>Train PmPNet</strong></p>
 <ul class="simple">
 <li><p>Device configuration, Hyper-parameters setting, paths setting for data and result folders:</p></li>
 </ul>
