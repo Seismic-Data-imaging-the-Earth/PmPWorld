@@ -17,6 +17,10 @@ identify PmP waves from a massive seismic database.
    training consists of continuing this iteration until the whole dataset has been tranversed. The training phase for **PmPNet**
    is complete when the pre-selected maximum number of epochs is reached.
 
+.. Tip::
+   | `Codes <https://zenodo.org/record/6499773#.YmuvHnVByJA>`_ of **PmPNet** and **PmP-traveltime-Net** can be downloaded at `Zenodo <https://zenodo.org/>`_.
+   | `Example data <https://osf.io/haxg8/>`_ can be downloaded at `OSF <https://osf.io/>`_.
+
 .. toctree::
   :maxdepth: 1
 
