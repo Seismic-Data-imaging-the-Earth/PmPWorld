@@ -60,6 +60,25 @@ Install `PyTorch <https://pytorch.org/>`_ which is used to construct and run **P
 
   conda install -c pytorch pytorch=1.11.0=py3.8_cuda11.3_cudnn8.2.0_0
 
+**Prepare training and validation data**
+
+There're 13 variables (highlighted are must-be variables while others can leave with empty) involved in training and validation data, they're:
+
+* ``waveform file name``: signal_fname = []
+* ``signal envelope`` (normalized in the time window from 2s before to 5s after P-wave): envelop_signal = []
+* earthquake ID given by the data center: signal_evid = []
+* earthquake lontitude: signal_evlo = []
+* earthquake latitude: signal_evla = []
+* ``earthquake depth``: PmP_evdp = []
+* earthquake magnitude: PmP_mag = []
+* station lontitude: signal_stlo = []
+* station latitude: signal_stla = []
+* ``earthquake-station distance``: PmP_dist = []
+* ``PmP label`` (1, true PmP; 0, false PmP): PmP_label = []
+* ``PmP arrival time`` (PmP-P differential traveltime time): PmP_time = []
+* ``First-P traveltime``: PmP_ptime = []
+
+The data can be prepared using python script ``DataReadin.ipynb``.
 
 **Train PmPNet**
 
