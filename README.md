@@ -18,10 +18,39 @@ More detailed information on PmP database and our developed workflow/code to ide
 
 ## Quick links
 
+#### Methodologies
+
 * [PmP database built by two-stage workflow](https://researchdata.ntu.edu.sg/dataset.xhtml?persistentId=doi:10.21979/N9/HKCXBF) ([Li et al. 2022](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2021JB023033)).
+* PmP database built by the updated two-stage workflow (in preparation).
 * [PmP database built by PmPNet](https://researchdata.ntu.edu.sg/dataset.xhtml?persistentId=doi:10.21979/N9/0O380V) ([Ding et al. 2022](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2021JB023830)).
 * [Codes for PmPNet and PmP-traveltime-Net](https://zenodo.org/record/6499773#.YmuvHnVByJA) ([Ding et al. 2022](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2021JB023830)).
 * [Example data for PmPNet and PmP-traveltime-Net](https://osf.io/haxg8/).
+
+#### Applications
+
+##### $\Rrightarrow$ Moho geometries
+
+* [Southern California]
+* [Northern California]
+
+##### $\Rrightarrow$ Deep volcanic architectures
+
+* [Coso volcanic field in Southern California]
+* [Clear Lake volcanic field in Northern California]
+
+##### $\Rrightarrow$ Deep fault root
+
+* [Parkfield region, California]
+
+##### $\Rrightarrow$ Deep seismogenic structures
+
+* [Southern California]
+
+#### Databases
+
+* [Southern California]
+* [Northern California]
+* [Long Valley caldera region]
 
 
 ---
