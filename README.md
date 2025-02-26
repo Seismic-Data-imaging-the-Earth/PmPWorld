@@ -30,35 +30,41 @@ More detailed information on PmP database and our developed workflow/code to ide
 
 ##### $\Rrightarrow$ Moho geometries
 
-* [Southern California]
-* [Northern California]
+* [Southern California](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2021JB023033)
+* [Northern California](https://www.pnas.org/doi/abs/10.1073/pnas.2317809121)
 
 ##### $\Rrightarrow$ Deep volcanic architectures
 
-* [Coso volcanic field in Southern California]
-* [Clear Lake volcanic field in Northern California]
+* [Coso volcanic field in Southern California](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2021JB023582)
+* [Clear Lake volcanic field in Northern California](https://www.pnas.org/doi/abs/10.1073/pnas.2317809121)
 
 ##### $\Rrightarrow$ Deep fault root
 
-* [Parkfield region, California]
+* [Parkfield region, California](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2024JB029918)
 
 ##### $\Rrightarrow$ Deep seismogenic structures
 
-* [Southern California]
+* [Southern California](https://www.sciencedirect.com/science/article/pii/S0040195122001226)
 
 #### Databases
 
-* [Southern California]
-* [Northern California]
-* [Long Valley caldera region]
+* [Southern California](https://doi.org/10.21979/N9/HKCXBF)
+* [Northern California](https://doi.org/10.21979/N9/JPCTF9)
+* Long Valley caldera region (in preparation)
 
 
 ---
 
 ## References
 
-* [Li et al. 2022. Moho Complexity in Southern California Revealed by Local PmP and Teleseismic Ps Waves](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2021JB023033)
+* [Chen, G., Chen, J., Li, T., Xu, M., Zhao, Q., & Tong, P. (2025). Adjoint‐state reflection traveltime tomography for velocity and interface inversion with its application in central California near Parkfield. Journal of Geophysical Research: Solid Earth, 130(1), e2024JB029918.](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2024JB029918)
 
-* [Ding et al. 2022. Deep Neural Networks for Creating Reliable PmP Database with a Case Study in Southern California](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2021JB023830)
+* [Li, T., Wu, S., & Tong, P. (2024). Multilevel transcrustal magmatic system beneath the Geysers-Clear Lake area. Proceedings of the National Academy of Sciences, 121(12), e2317809121.](https://www.pnas.org/doi/abs/10.1073/pnas.2317809121)
 
+* [Wu, Shucheng, et al. "Lower crust structures and dynamics of southern California revealed by first P and PmP traveltime data." Tectonophysics 830 (2022): 229328.](https://www.sciencedirect.com/science/article/pii/S0040195122001226)
 
+* [Wang, D., Wu, S., Li, T., Tong, P., & Gao, Y. (2022). Elongated magma plumbing system beneath the Coso volcanic field, California, constrained by seismic reflection tomography. Journal of Geophysical Research: Solid Earth, 127(6), e2021JB023582.](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2021JB023582)
+
+* [Ding, W., Li, T., Yang, X., Ren, K., & Tong, P. (2022). Deep neural networks for creating reliable PmP database with a case study in southern California. Journal of Geophysical Research: Solid Earth, 127(4), e2021JB023830.](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2021JB023830)
+
+* [Li, T., Yao, J., Wu, S., Xu, M., & Tong, P. (2022). Moho complexity in southern California revealed by local PmP and teleseismic Ps waves. Journal of Geophysical Research: Solid Earth, 127(2), e2021JB023033.](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2021JB023033)
