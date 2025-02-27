@@ -61,7 +61,7 @@ More detailed information on PmP database and our developed workflow/code to ide
 
 * [Li, T., Wu, S., & Tong, P. (2024). Multilevel transcrustal magmatic system beneath the Geysers-Clear Lake area. Proceedings of the National Academy of Sciences, 121(12), e2317809121.](https://www.pnas.org/doi/abs/10.1073/pnas.2317809121)
 
-* [Wu, Shucheng, et al. "Lower crust structures and dynamics of southern California revealed by first P and PmP traveltime data." Tectonophysics 830 (2022): 229328.](https://www.sciencedirect.com/science/article/pii/S0040195122001226)
+* [Wu, S., Li, T., Wang, D., & Tong, P. (2022). Lower crust structures and dynamics of southern California revealed by first P and PmP traveltime data. Tectonophysics, 830, 229328.](https://www.sciencedirect.com/science/article/pii/S0040195122001226)
 
 * [Wang, D., Wu, S., Li, T., Tong, P., & Gao, Y. (2022). Elongated magma plumbing system beneath the Coso volcanic field, California, constrained by seismic reflection tomography. Journal of Geophysical Research: Solid Earth, 127(6), e2021JB023582.](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2021JB023582)
 
