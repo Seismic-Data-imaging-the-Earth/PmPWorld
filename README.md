@@ -35,8 +35,9 @@ More detailed information on PmP database and our developed workflow/code to ide
 
 ##### $\Rrightarrow$ Deep volcanic architectures
 
-* [Coso volcanic field in Southern California](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2021JB023582)
-* [Clear Lake volcanic field in Northern California](https://www.pnas.org/doi/abs/10.1073/pnas.2317809121)
+* [Coso Volcanic Field in Southern California](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2021JB023582)
+* [Clear Lake Volcanic Field in Northern California](https://www.pnas.org/doi/abs/10.1073/pnas.2317809121)
+* Long Valley Caldera in Eastern California (in prep.)
 
 ##### $\Rrightarrow$ Deep fault root
 
@@ -48,9 +49,12 @@ More detailed information on PmP database and our developed workflow/code to ide
 
 #### Databases
 
-* [Southern California](https://doi.org/10.21979/N9/HKCXBF)
+* Southern California\
+ <small>[Whole Southern California](https://doi.org/10.21979/N9/HKCXBF)</small>\
+ <small>[Coso-Ridgecrest Area](https://doi.org/10.21979/N9/RMRFJO)</small>
 * [Northern California](https://doi.org/10.21979/N9/JPCTF9)
-* Long Valley caldera region (in preparation)
+* [Central California, Parkfield](https://doi.org/10.5281/zenodo.14202376)
+* Eastern California, Long Valley Caldera (in prep.)
 
 
 ---
