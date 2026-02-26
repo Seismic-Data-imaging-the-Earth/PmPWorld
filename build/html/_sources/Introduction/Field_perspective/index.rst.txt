@@ -15,7 +15,7 @@ We observe that the frequency of P and PmP waves can be up to 5 Hz.
 
 Comparison between the P and PmP particle motions:
 
-.. figure:: /photos/Polarity_Github.png
+.. figure:: /photos/Polarity.png
    :alt: Particle-motion comparison between P and PmP waves.
    :width: 100.0%
    :align: center

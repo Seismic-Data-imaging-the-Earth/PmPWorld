@@ -26,6 +26,7 @@ Welcome to PmPWorld!
    Introduction/Earth_model/index
    Introduction/Synthetic_perspective/index
    Introduction/Field_perspective/index
+   Introduction/Imaging_power/index
 
 
 .. toctree::
