@@ -24,7 +24,7 @@ Note that the ratio values greater than 10.0 are plotted as inverted triangles.
    :width: 100.0%
    :align: center
 
-   In the figure, the synthetic vertical-component waveforms (filtered between 1-7 Hz) are shown (a), and they're computed
-   in the multi-layer crust model (d) by using the frequency-wavenumber (FK) synthetic seismogram package. Here, using the Taup 
+   In the figure, the synthetic vertical-component waveforms (filtered between 1-7 Hz), and they're computed
+   in the multi-layer crust model by using the frequency-wavenumber (FK) synthetic seismogram package. Here, using the Taup 
    (`Crotwell et al., 1999 <https://doi.org/10.1785/gssrl.70.2.154>`_) package, we recognize eight main phases. Specifically, 
    we use P5.5 and P16 to denote the refracted waves along the intra-crustal interfaces, e.g., PmP5.5 and PmP16 denote the reflected waves along the intra-crustal interfaces.
