@@ -36,6 +36,9 @@ Welcome to PmPWorld!
 
    Previous_study/California/index
    Previous_study/Japan/index
+   Previous_study/Europe/index
+   Previous_study/China/index
+   
 
 
 .. toctree::
