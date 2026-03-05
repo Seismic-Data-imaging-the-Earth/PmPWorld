@@ -52,7 +52,10 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Previous Study</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">California</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">California</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#pmp-phase-identification-using-waveform-stacking-method-richards-dinger-shearer-1997">PmP phase identification using waveform stacking method (Richards-Dinger &amp; Shearer, 1997)</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../Japan/index.html">Japan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Europe/index.html">Europe</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../China/index.html">China</a></li>
@@ -63,10 +66,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Detecting_PmP/Phase_identification/index.html">Phase Identification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Detecting_PmP/Machine_learning/index.html">Machine Learning</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Applications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Applications/Moho_Geometry/index.html">Moho Geometries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Applications/Deep_Volcanic_Architectures/index.html">Deep Volcanic Architectures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Applications/Deep_Seismogenic_Structures/index.html">Deep Seismogenic Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Applications/Deep_Fault_Root/index.html">Deep Fault Root</a></li>
+</ul>
 <p class="caption" role="heading"><span class="caption-text">PmP Database</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../PmP_database/Southern_California/index.html">Southern California</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../PmP_database/Northern_California/index.html">Northern California</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../PmP_database/California/index.html">California</a></li>
 </ul>
 
         </div>
@@ -95,6 +104,34 @@
              
   <section id="california">
 <h1>California<a class="headerlink" href="#california" title="Link to this heading"></a></h1>
+<section id="pmp-phase-identification-using-waveform-stacking-method-richards-dinger-shearer-1997">
+<h2>PmP phase identification using waveform stacking method (<a class="reference external" href="https://doi.org/10.1029/97JB00883">Richards-Dinger &amp; Shearer, 1997</a>)<a class="headerlink" href="#pmp-phase-identification-using-waveform-stacking-method-richards-dinger-shearer-1997" title="Link to this heading"></a></h2>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/Richards_Shear_1997_method.png"><img alt="PmP phase identification through waveform stacking." src="../../_images/Richards_Shear_1997_method.png" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">By stacking waveforms within reflection point bins, it is possible to measure the U-shape curve,
+i.e., the PmP-first P differential traveltimes with respect to distances.
+Then the U-shape curves can be fitted with two free parameters: Moho depth and P-wave velocity in the uppermost mantle.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Technical workflow:</strong></p>
+<ol class="arabic simple">
+<li><p>Aligning the collected event waveforms to the first-P arrivals;</p></li>
+<li><p>Based on regional 1D HK model (<a class="reference external" href="https://doi.org/10.1130/0016-7606(1977)88%3C1469:SSOTTR%3E2.0.CO;2">Hadley &amp; Kanamori, 1977</a>),
+conducting the focal depth correction to the aligned waveforms, making the PmP arrivals solely
+dependent on the epicentral distances;</p></li>
+<li><p>Binning the waveforms based on the reflection points;</p></li>
+<li><p>Stacking the waveforms within each bin to enhance the PmP signals;</p></li>
+<li><p>Measuring the differential traveltimes and fitting the U-shape curves to
+estimate the Moho depth and P-wave velocity in the uppermost mantle.</p></li>
+</ol>
+<p><strong>Results of Moho depth and uppermost mantle P-wave velocity estimation in Southern California:</strong></p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Richards_Shear_1997_result.png"><img alt="Moho depth and uppermost mantle P-wave velocity estimation results." src="../../_images/Richards_Shear_1997_result.png" style="width: 100%;" />
+</a>
+</figure>
+</section>
 </section>
 
 
@@ -108,7 +145,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2021-2026, PmPBoy.</p>
+    <p>&#169; Copyright Since 2021, PmPBoy.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
