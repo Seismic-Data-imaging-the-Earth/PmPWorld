@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'PmPWorld'
-copyright = '2021-2026, PmPBoy'
+copyright = 'Since 2021, PmPBoy'
 author = 'PmPBoy'
 
 

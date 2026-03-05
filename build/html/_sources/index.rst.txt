@@ -54,7 +54,17 @@ Welcome to PmPWorld!
 .. toctree::
    :maxdepth: 3
    :hidden:
+   :caption: Applications
+
+   Applications/Moho_Geometry/index
+   Applications/Deep_Volcanic_Architectures/index
+   Applications/Deep_Seismogenic_Structures/index
+   Applications/Deep_Fault_Root/index
+
+
+.. toctree::
+   :maxdepth: 3
+   :hidden:
    :caption: PmP Database
 
-   PmP_database/Southern_California/index
-   PmP_database/Northern_California/index
+   PmP_database/California/index
